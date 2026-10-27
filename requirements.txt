@@ -1,0 +1,15 @@
+gradio[oauth]
+smolagents[toolkit,litellm]
+ddgs
+duckduckgo-search
+requests
+beautifulsoup4
+markdownify
+pandas
+openpyxl
+pypdf
+pillow
+wikipedia-api
+youtube-transcript-api
+huggingface_hub
+google-genai
