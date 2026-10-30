@@ -15,7 +15,7 @@ hf_oauth_expiration_minutes: 480
 
 A tool-using agent for the Hugging Face Agents Course final assignment. It uses **smolagents** to answer GAIA benchmark questions, handle attached files, and submit answers to the course scoring API.
 
-## How it works
+## Agent Process
 
 1. **Fetch tasks:** the Gradio app reads questions from a local **questions.json** when available, otherwise from the course API.
 2. **Handle attachments:** files are downloaded from the course API, with a gated GAIA dataset fallback when needed.
@@ -23,7 +23,7 @@ A tool-using agent for the Hugging Face Agents Course final assignment. It uses 
 4. **Format the answer:** the candidate is cleaned and passed through a second model call for exact-answer formatting.
 5. **Cache and submit:** successful answers can be cached by task ID, then sent to the evaluator. The UI displays the returned score and submitted answers.
 
-## Methods that matter
+## Principal Methods
 
 - **Tool-using agent:** smolagents CodeAgent, configured for up to 12 steps and a planning interval of 3.
 - **Web research:** DuckDuckGo search, webpage retrieval, Wikipedia, and an optional Gemini-powered Google Search fallback.
