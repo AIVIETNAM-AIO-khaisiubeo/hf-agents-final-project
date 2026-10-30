@@ -2,7 +2,7 @@
 
 A tool-using agent for the Hugging Face Agents Course final assignment. It uses **smolagents** to answer GAIA benchmark questions, work with attached files, and submit answers to the course evaluator.
 
-## How it works
+## Agent Process 
 
 1. Fetch tasks from a local \`questions.json\` when present, or from the course API.
 2. Download optional task attachments; if the course API fails, try the gated GAIA dataset.
@@ -10,7 +10,7 @@ A tool-using agent for the Hugging Face Agents Course final assignment. It uses 
 4. Clean the candidate answer and ask the model to verify its exact-match formatting.
 5. Cache successful answers by task ID and submit the answers to the evaluator.
 
-## Methods worth noting
+## Methods 
 
 - **Tool use:** DuckDuckGo search, webpage retrieval, Wikipedia, and an optional Gemini-powered Google Search fallback.
 - **Structured-data reasoning:** pandas for CSV and Excel; the agent prompt encourages code-based calculations instead of mental arithmetic.
